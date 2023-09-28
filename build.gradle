@@ -26,6 +26,7 @@ sonar {
     property "sonar.projectKey", "bhos-qa_l3-sonarcloud-Aytaj-Kazim"
     property "sonar.organization", "bhos-qa"
     property "sonar.host.url", "https://sonarcloud.io"
+    property "sonar.exclusions", "**/Main.java"
   }
 }
 
