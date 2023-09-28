@@ -7,17 +7,15 @@ import org.junit.jupiter.api.Test;
 public class PermissionManagerTest {
 
     @Test
-    public void testGetRoleName() {
+    public void getmCurrentLevel() {
         PermissionManager manager = new PermissionManager();
-        assertEquals("Admin", manager.getRoleName(PermissionLevel.ADMIN));
-        assertEquals("Developer", manager.getRoleName(PermissionLevel.DEVELOPER));
-        assertEquals("User", manager.getRoleName(PermissionLevel.USER));
+        assertEquals(manager.getmCurrentLevel(), PermissionLevel.USER);
     }
 
     @Test
-    public void testSetPermissionLevel() {
+    public void setmCurrentLevel() {
         PermissionManager manager = new PermissionManager();
-        manager.setPermissionLevel(PermissionLevel.ADMIN);
-        assertEquals(PermissionLevel.ADMIN, manager.mCurrentLevel);
+        manager.setmCurrentLevel(PermissionLevel.DEVELOPER);
+        assertEquals(manager.getmCurrentLevel(), PermissionLevel.DEVELOPER);
     }
 }
